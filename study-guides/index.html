@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>راهنمای مطالعهٔ باکتری‌شناسی</title>
+<style>
+@font-face{font-family:Vazirmatn;src:url('_work/vazirmatn.woff2') format('woff2');font-weight:100 900;font-display:swap}
+:root{color-scheme:light;--bg:#f4f2eb;--paper:#fffef9;--ink:#1b3735;--muted:#586c69;--line:#d4ded6;--accent:#176b60;--wash:#e8f0e9;--note:#80533b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;font-size:16px;line-height:1.95}a{color:var(--accent);text-underline-offset:5px}a:focus-visible,summary:focus-visible{outline:3px solid #bd6b43;outline-offset:5px}main{max-width:1160px;margin:auto;padding:36px 32px 64px}.eyebrow{font-size:13px;letter-spacing:.04em;font-weight:700;color:var(--accent)}header{border-bottom:1px solid var(--line);padding:16px 0 28px}.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:48px;align-items:end}h1{font-size:clamp(32px,4.5vw,54px);line-height:1.45;margin:14px 0 18px;letter-spacing:-1.3px}h1 span{color:var(--accent)}.lead{color:var(--muted);max-width:650px;margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{border-top:2px solid var(--accent);padding:12px 0 4px}.stat strong{display:block;font-size:32px;line-height:1.5}.stat span{font-size:13px;color:var(--muted)}nav{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}nav a{padding:5px 15px;background:var(--paper);border:1px solid var(--line);border-radius:24px;text-decoration:none;font-size:14px}.section-head{display:flex;gap:20px;justify-content:space-between;align-items:baseline;margin:34px 0 16px}.section-head h2{margin:0;font-size:24px}.section-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--paper);padding:26px 28px;border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column}.card-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.number{color:var(--accent);font-weight:750;font-size:13px}.meta{color:var(--muted);font-size:12px}.card h3{font-size:25px;margin:8px 0 0}.subtitle{font-weight:600;color:var(--accent);font-size:14px;margin:2px 0 12px}.card p{margin:0 0 12px}.card ul{padding-right:21px;margin:0 0 16px}.card li{margin:5px 0}.card details{border-top:1px solid var(--line);padding-top:12px;margin-top:auto}.card summary{cursor:pointer;font-weight:650;font-size:14px}.card details ol{padding-right:22px;font-size:14px;margin-bottom:0}.actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px}.button{display:inline-block;background:var(--accent);color:white;border-radius:9px;padding:8px 18px;text-decoration:none;font-weight:600;font-size:14px}.source{font-size:13px}.method{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:24px 28px;background:var(--wash);border-radius:16px}.method h3{font-size:17px;margin:0 0 7px}.method p{font-size:14px;color:var(--muted);margin:0}.skip{margin-top:34px;padding:24px 28px;border:1px solid #d9c9bc;border-radius:16px}.skip h2{font-size:21px;margin:0 0 8px;color:var(--note)}.skip p{margin:0;color:var(--muted);font-size:14px}.skipped-files{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.skipped-files span{padding:5px 16px;background:#ece5dc;border-radius:20px;color:#684936;font-size:14px}footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}footer p{margin:3px 0}.hint{font-size:13px;color:var(--muted);margin:15px 0 0}
+@media(max-width:760px){main{padding:22px 18px 40px}.hero{grid-template-columns:1fr;gap:24px}.grid{grid-template-columns:1fr}.method{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:6px}.card{padding:22px}.stats{max-width:430px}.skip{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white;font-size:12px}main{padding:0}.card{break-inside:avoid}.grid{display:block}.card{margin-bottom:16px}nav,.actions,details{display:none}.hero{gap:24px}.skip{break-inside:avoid}}
+.home-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:7px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font-size:calc(14px * var(--text-scale,1));font-weight:600;text-decoration:none;white-space:nowrap}.home-link:hover{background:var(--soft,var(--wash));text-decoration:underline}.home-link:focus-visible{outline:3px solid var(--green,var(--accent));outline-offset:3px}.home-fallback{margin:0 0 14px}.js .home-fallback{display:none}@media print{.home-link,.home-fallback{display:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="eyebrow">فهرست جزوه‌ها</p>
+<div class="hero">
+<div><h1><strong>جزوه‌های باکتری‌شناسی</strong></h1><p class="lead">راهنماها، پرسش‌ها و مرور درس‌های هر استاد.</p></div>
+<div class="stats" aria-label="آمار راهنماهای این فهرست"><div class="stat"><strong>۸</strong><span>راهنمای آماده</span></div><div class="stat"><strong>۹۰</strong><span>درس کوتاه</span></div><div class="stat"><strong>۲۱۲</strong><span>صفحهٔ منبع</span></div></div>
+</div>
+<nav aria-label="دسترسی به فایل‌ها"><a href="#haji-khani">استاد حاجی خانی</a><a href="#goodarzi">استاد گودرزی</a><a href="#hashemi">استاد هاشمی</a><a href="#hakemi">استاد حاکمی</a><a href="#ghazi">استاد قاضی</a><a href="#dabiri">استاد دبیری</a><a href="#doostdar">استاد دوستدار</a><a href="#nasiri">استاد نصیری</a></nav>
+</header>
+
+<div class="section-head"><h2>فایل‌ها و خلاصهٔ موضوع‌ها</h2><p>راهنماهای ذخیره‌شده: درس‌ها، پرسش‌های جدا، فلش‌کارت و مرور سریع</p></div>
+<section class="grid" aria-label="راهنماهای مطالعه">
+<article class="card" id="haji-khani">
+<div class="card-top"><span class="number">۰۱ · شناخت سلول و ساختار</span><span class="meta">۳۵ صفحه · ۱۵ درس</span></div>
+<h3>استاد حاجی خانی</h3><p class="subtitle">پایه‌های باکتری‌شناسی و باکتری‌های دهان</p>
+<p>این فایل از شناخت سلول باکتری شروع می‌شود، سپس رشد و ژنتیک را توضیح می‌دهد و به گروه‌های استرپتوکوکی و ارتباط آن‌ها با دهان و بیماری می‌رسد.</p>
+<ul><li>نام‌گذاری و دسته‌بندی را از شناسایی یک باکتری جدا کن.</li><li>ساختارهای سلولی، دیواره، رنگ گرم و اندوسپور را به ویژگی‌هایشان وصل کن.</li><li>منحنی رشد و اصطلاح‌های ژنتیک را به‌صورت مفهومی مرور کن.</li><li>گروه‌های A و B، پنوموکوک، ویریدانس و انتروکوک را در یک جدول شخصی مقایسه کن.</li></ul>
+<details><summary>سه پرسش برای یادآوری</summary><ol><li>دیواره و غشا چه تفاوتی در نقش دارند؟</li><li>کروموزوم، پلاسمید و نوکلئوئید چه نسبتی با هم دارند؟</li><li>باکتری‌های مطرح در دهان چه ارتباط‌هایی با پلاک و بیماری دارند؟</li></ol></details>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AD%D8%A7%D8%AC%DB%8C%20%D8%AE%D8%A7%D9%86%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AD%D8%A7%D8%AC%DB%8C%20%D8%AE%D8%A7%D9%86%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="goodarzi"><div class="card-top"><span class="number">۰۲ · کنترل و مقایسه</span><span class="meta">۳۳ صفحهٔ منبع · ۸ درس منتخب</span></div><h3>استاد گودرزی</h3><p class="subtitle">کنترل میکروبی، نایسریا و مفاهیم عمومی بیماری‌ها</p><p>خلاصهٔ منتخب در هشت درس: تعریف‌ها و دسته‌بندی‌های کنترل میکروبی، مقایسهٔ دو نایسریا و مرور عمومی دو موضوع مشترک انسان و حیوان. همراه با ۱۶ پرسش یادآوری و ۳ تمرین ترکیبی.</p><p>این راهنما پوشش کامل جزوه نیست؛ جزئیات عملی و حساس کنار گذاشته شده‌اند.</p><div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%DA%AF%D9%88%D8%AF%D8%B1%D8%B2%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%DA%AF%D9%88%D8%AF%D8%B1%D8%B2%DB%8C.pdf">جزوهٔ اصلی</a></div></article>
+
+<article class="card" id="hashemi">
+<div class="card-top"><span class="number">۰۳ · هدف‌ها و اثرها</span><span class="meta">۲۴ صفحه · ۱۱ درس</span></div>
+<h3>استاد هاشمی</h3><p class="subtitle">مبانی آنتی‌بیوتیک‌ها و مقاومت</p>
+<p>محور این فایل این است که هر گروه دارویی چه ساختار یا مسیری را هدف می‌گیرد. بخش پایانی، مقاومت و چند موضوع بیماری‌محورِ خود جزوه را کنار این نقشه قرار می‌دهد.</p>
+<ul><li>هدف اثر، طیف اثر و مقاومت را سه مفهوم جدا در نظر بگیر.</li><li>واژه‌های MIC، MBC و آنتی‌بیوگرام را در حد معنای گزارش مقایسه کن.</li><li>گروه‌ها را زیر دیواره، غشا، ریبوزوم، مادهٔ ژنتیکی و مسیر فولات مرتب کن.</li><li>بخش‌های وبا، کمپیلوباکتر و هلیکوباکتر را جدا از نقشهٔ داروها مرور کن.</li></ul>
+<details><summary>سه پرسش برای یادآوری</summary><ol><li>هدف یک دارو چه تفاوتی با طیف آن دارد؟</li><li>مهار ساخت پروتئین چه ارتباطی با ریبوزوم دارد؟</li><li>تغییر هدف دارو چگونه با مفهوم مقاومت مرتبط می‌شود؟</li></ol></details>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%87%D8%A7%D8%B4%D9%85%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%87%D8%A7%D8%B4%D9%85%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="hakemi">
+<div class="card-top"><span class="number">۰۴ · میکروبیوتا و میزبان</span><span class="meta">۳۵ صفحه · ۱۶ درس</span></div>
+<h3>استاد حاکمی</h3><p class="subtitle">میکروبیوتا، بی‌هوازی‌ها و کلستریدیوم‌ها</p>
+<p>این فایل از ارتباط میکروبیوتا با بدن و دهان شروع می‌شود، سپس باکتری‌های بی‌هوازی، کلستریدیوم‌ها و نقش سم‌ها در بیماری را بررسی می‌کند.</p>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AD%D8%A7%DA%A9%D9%85%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AD%D8%A7%DA%A9%D9%85%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="ghazi">
+<div class="card-top"><span class="number">۰۵ · مقایسهٔ گروه‌ها</span><span class="meta">۳۰ صفحه · ۱۳ درس</span></div>
+<h3>استاد قاضی</h3><p class="subtitle">استافیلوکوک، کلامیدیا، مایکوپلاسما و عوامل بیمارستانی</p>
+<p>این فایل چند گروه متفاوت را کنار هم قرار می‌دهد. برای مطالعه، هر گروه را با چهار عنوان ثابت بخوان: ویژگی ساختاری، رابطه با میزبان، تظاهرهای مطرح در جزوه و منطق شناسایی.</p>
+<ul><li>در استافیلوکوک‌ها، ساختار، آنزیم و سم را با هم اشتباه نگیر.</li><li>در کلامیدیا، وابستگی به میزبان و تفاوت دو شکل اصلی را مرور کن.</li><li>نبود دیواره در مایکوپلاسما را به تفاوت‌های مفهومی آن وصل کن.</li><li>در سودوموناس و آسینتوباکتر، محل بیماری و زمینهٔ بیمارستانی را دسته‌بندی کن.</li></ul>
+<details><summary>سه پرسش برای یادآوری</summary><ol><li>مسمومیت غذایی چه تفاوتی با عفونت بافتی دارد؟</li><li>دو شکل اصلی کلامیدیا چه تفاوت مفهومی دارند؟</li><li>چه ویژگی ساختاری مایکوپلاسما را از بسیاری از گروه‌ها جدا می‌کند؟</li></ol></details>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%82%D8%A7%D8%B6%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%82%D8%A7%D8%B6%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="dabiri">
+<div class="card-top"><span class="number">۰۶ · دسته‌بندی و ارتباط</span><span class="meta">۱۳ صفحه · ۸ درس</span></div>
+<h3>استاد دبیری</h3><p class="subtitle">باکتری‌های رشته‌ای، هموفیلوس و عوامل تنفسی</p>
+<p>فایل با اکتینومایسس و باکتری‌های رشته‌ای محیطی آغاز می‌شود؛ سپس هموفیلوس، لژیونلا و بوردتلا را مطرح می‌کند. محور مقایسه، منشأ، ارتباط با میزبان و تظاهر بیماری است.</p>
+<ul><li>شکل رشته‌ای را از تعلق به گروه قارچ‌ها جدا کن.</li><li>ارتباط اکتینومایسس با دهان و تفاوت آن با گروه‌های محیطی را مرور کن.</li><li>ویژگی‌های کلی هموفیلوس و نقش کپسول را در یک نقشهٔ کوتاه بنویس.</li><li>بخش لژیونلا و مراحل مطرح‌شده برای سیاه‌سرفه را جداگانه یادآوری کن.</li></ul>
+<details><summary>سه پرسش برای یادآوری</summary><ol><li>چرا شکل رشته‌ای به‌تنهایی به معنای قارچ‌بودن نیست؟</li><li>منشأ درون‌زاد و برون‌زاد چه تفاوتی دارند؟</li><li>چطور موضوع‌های دهانی و تنفسی این فایل را به دو نقشهٔ جدا تبدیل می‌کنی؟</li></ol></details>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AF%D8%A8%DB%8C%D8%B1%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AF%D8%A8%DB%8C%D8%B1%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="doostdar">
+<div class="card-top"><span class="number">۰۷ · مایکوباکتری و اسپیروکت</span><span class="meta">۳۶ صفحه · ۱۵ درس</span></div>
+<h3>استاد دوستدار</h3><p class="subtitle">مایکوباکتری‌ها و اسپیروکت‌ها</p>
+<p>این فایل مایکوباکتری‌ها، سل و جذام را به ارتباط ساختار، ایمنی و بیماری پیوند می‌دهد؛ سپس اسپیروکت‌ها و الگوهای بیماری آن‌ها را مقایسه می‌کند.</p>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AF%D9%88%D8%B3%D8%AA%D8%AF%D8%A7%D8%B1.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%AF%D9%88%D8%B3%D8%AA%D8%AF%D8%A7%D8%B1.pdf">جزوهٔ اصلی</a></div>
+</article>
+
+<article class="card" id="nasiri">
+<div class="card-top"><span class="number">۰۸ · مرور و خودارزیابی</span><span class="meta">۶ صفحه · ۴ درس</span></div>
+<h3>استاد نصیری</h3><p class="subtitle">پرسش‌ها، پاسخ‌ها و پیوند مفهوم‌ها</p>
+<p>این فایل کوتاه، مجموعه‌ای از سؤال و پاسخ است. موضوع‌ها از انتقال و آنتی‌ژن‌ها تا بیماری‌زایی و ارتباط دهان با باکتریمی گسترده‌اند؛ برای مرور پس از درس‌ها مناسب است.</p>
+<ul><li>اول صورت سؤال را بخوان و بدون دیدن پاسخ توضیح بنویس.</li><li>در سؤال‌های انتقال، فرض‌های خود سؤال را مشخص کن.</li><li>آنتی‌ژن‌های H، O و K و واژه‌های بیماری‌زایی را به موضوع مربوط وصل کن.</li><li>پاسخت را با نکات ضروری و ابهام‌های ثبت‌شده در راهنما مقایسه کن.</li></ul>
+<details><summary>سه پرسش برای یادآوری</summary><ol><li>چرا فرض‌های صورت سؤال در نتیجه‌گیری اهمیت دارند؟</li><li>آنتی‌ژن‌های H، O و K به چه ویژگی‌هایی اشاره می‌کنند؟</li><li>موضوع دهان و باکتریمی به کدام بخش درس‌های قبلی وصل می‌شود؟</li></ol></details>
+<div class="actions"><a class="button" href="%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%86%D8%B5%DB%8C%D8%B1%DB%8C.html">بازکردن راهنمای کامل</a><a class="source" href="../%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D9%86%D8%B5%DB%8C%D8%B1%DB%8C.pdf">جزوهٔ اصلی</a></div>
+</article>
+</section>
+
+<div class="section-head"><h2>روش سادهٔ استفاده</h2><p>هر بار فقط یک درس از یک فایل</p></div>
+<section class="method" aria-label="روش مطالعه"><div><h3>۱. بخوان و ببند</h3><p>یک درس کوتاه بخوان. عنوان‌ها را ببین، سپس متن را ببند و مفهوم اصلی را با زبان خودت توضیح بده.</p></div><div><h3>۲. از حافظه بنویس</h3><p>به زبانهٔ پرسش‌ها برو. پیش از بازکردن پاسخ، چند جمله بنویس و بعد نکات جاافتاده را مشخص کن.</p></div><div><h3>۳. دوباره برگرد</h3><p>همان روز، روز بعد و چند روز بعد مرور کوتاه انجام بده. فلش‌کارت‌ها را برای یادآوری به کار ببر.</p></div></section>
+
+
+<footer><p>مبنای این صفحه: فایل‌های درسی همین پوشه و راهنماهای ذخیره‌شدهٔ آن‌ها. پژوهش بیرونی انجام نشده است.</p><p>این فهرست به تمام راهنماهای HTML موجود پیوند دارد. پرسش‌های این صفحه تمرین یادآوری‌اند.</p></footer>
+</main>
+</body>
+</html>

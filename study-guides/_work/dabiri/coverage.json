@@ -1,0 +1,80 @@
+{
+  "source": "استاد دبیری.pdf",
+  "source_pages": 13,
+  "lessons": 8,
+  "recall_questions": 16,
+  "mixed_questions": 3,
+  "source_questions": 2,
+  "flags": 8,
+  "page_coverage": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "sections": "جلد و فهرست",
+      "lessons": []
+    },
+    {
+      "pages": [
+        3,
+        4
+      ],
+      "sections": "اکتینومایسس و اسرائیلی؛ تصویر گرانول و ضایعه",
+      "lessons": [
+        1,
+        2
+      ]
+    },
+    {
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "sections": "استرپتومایسس، مایستوما، نوکاردیا، منشأ و درمان",
+      "lessons": [
+        3,
+        4
+      ]
+    },
+    {
+      "pages": [
+        7
+      ],
+      "sections": "فهرست",
+      "lessons": []
+    },
+    {
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "sections": "هموفیلوس؛ گونه‌ها، نمودار مننژیت، ساتلایت، تشخیص و هر دو سؤال",
+      "lessons": [
+        5,
+        6
+      ]
+    },
+    {
+      "pages": [
+        12
+      ],
+      "sections": "لژیونلا و مکانیسم",
+      "lessons": [
+        7
+      ]
+    },
+    {
+      "pages": [
+        13
+      ],
+      "sections": "بوردتلا و شکل پیام‌رسانی",
+      "lessons": [
+        8
+      ]
+    }
+  ]
+}

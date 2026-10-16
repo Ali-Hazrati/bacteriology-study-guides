@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Extracted PDF pages and local visual previews
+study-guides/_work/**/*.png
+study-guides/_work/**/*.jpg
+study-guides/_work/**/page-*.txt
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example

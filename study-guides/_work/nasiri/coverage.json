@@ -1,0 +1,42 @@
+{
+  "source": "استاد نصیری.pdf",
+  "source_pages": 6,
+  "lessons": 4,
+  "recall_questions": 8,
+  "mixed_questions": 2,
+  "source_questions": 10,
+  "flags": 4,
+  "page_coverage": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "sections": "جلد و فهرست",
+      "lessons": []
+    },
+    {
+      "pages": [
+        3,
+        5
+      ],
+      "sections": "انتقال، مثال‌ها، آنتی‌ژن‌ها و شکل فاگوسیت",
+      "lessons": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "pages": [
+        4,
+        6
+      ],
+      "sections": "تیفوئید، دهان و کنترل؛ همهٔ ده شماره با زیرسؤال‌ها",
+      "lessons": [
+        3,
+        4
+      ]
+    }
+  ]
+}
