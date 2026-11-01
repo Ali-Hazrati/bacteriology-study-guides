@@ -5,7 +5,6 @@
   "recall_questions": 16,
   "mixed_questions": 3,
   "source_questions": 2,
-  "flags": 8,
   "page_coverage": [
     {
       "pages": [

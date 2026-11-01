@@ -5,7 +5,6 @@
   "recall_questions": 26,
   "mixed_questions": 4,
   "source_questions": 2,
-  "flags": 13,
   "page_coverage": [
     {
       "pages": [
@@ -137,7 +136,7 @@
         28,
         29
       ],
-      "sections": "توان بیماری‌زایی، مقاومت، نام‌های دارو و کنترل",
+      "sections": "بیماری‌زایی، مقاومت، نام‌های دارو و کنترل",
       "lessons": [
         12,
         13
