@@ -1,5 +1,5 @@
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 import base64, json, re
 import build_guide as b
 
@@ -395,7 +395,7 @@ review=T(['موضوع','پاسخ کوتاه برای یادآوری','منبع']
  ['سه شکل بوتولیسم','غذایی سم بیرون؛ نوزادی سم در روده؛ زخم سم در محل زخم.',refs([32,34])],
  ['دیفیسیل','کاهش رقبا، سم A و B، اختلال اسکلت و اتصال، آسیب سد و اسهال.',refs([34,35])]])
 
-def build(name='استاد حاکمی',slug='hakemi',ordinal='چهارم',sessions='سوم، یازدهم و دوازدهم'):
+def build(name='استاد حاکمی',slug='hakemi',ordinal='چهارم',sessions='سوم، یازدهم و دوازدهم',*,coverage_note=None):
     count=len(b.lessons); recall=sum(len(l['questions']) for l in b.lessons)
     css=b.CSS
     font=base64.b64encode((ROOT/'_work/vazirmatn.woff2').read_bytes()).decode()
@@ -419,12 +419,14 @@ def build(name='استاد حاکمی',slug='hakemi',ordinal='چهارم',sessio
     extra=section('quick-review','مرور سریع','پس از مطالعه، ستون پاسخ را بپوشان و هر مسیر را با جملهٔ کامل توضیح بده. ',review)
     extra+=section('written-practice','تمرین نوشتاری ترکیبی','این 8 پرسش، مطالب چند درس را به هم مرتبط می‌کنند. ابتدا پاسخ خودت را بنویس و سپس با پاسخ و نکات کلیدی مقایسه کن.',P('قالب پاسخ: تعریف، ویژگی مرتبط، مراحل علت و معلول، پیامد و مثال. در مقایسه، برای هر دو طرف یک محور مشترک انتخاب کن.')+''.join(mixed))
     extra+=section('source-questions','پرسش‌های خود جزوه','پرسش‌های داخل متن با بیان روان‌تر از تمرین‌های تازه جدا شده‌اند. پاسخ‌ها با توضیح بیشتر و جمله‌بندی روان‌تر نوشته شده‌اند.',''.join(source_questions))
-    extra+=section('coverage','پوشش صفحات منبع','همهٔ صفحات، جدول‌ها و شکل‌های آموزشی بررسی شده‌اند. تصویرها به توضیح یا جدول تبدیل شده‌اند؛ برای ظاهر اصلی، صفحهٔ منبع را باز کن. جزئیات اجرایی آزمایش‌ها به مفهوم امتحانی خلاصه شده‌اند.',cov+P(f'{count} درس، {recall} پرسش یادآوری و فلش‌کارت، {len(mixed)} تمرین ترکیبی و {len(source_questions)} پرسش منبع. درس‌ها از پرسش‌ها جدا هستند.')+b.supplemental_sources(name))
+    coverage_lead = coverage_note or 'همهٔ صفحات، جدول‌ها و شکل‌های آموزشی بررسی شده‌اند. تصویرها به توضیح یا جدول تبدیل شده‌اند؛ برای ظاهر اصلی، صفحهٔ منبع را باز کن. جزئیات اجرایی آزمایش‌ها به مفهوم امتحانی خلاصه شده‌اند.'
+    extra+=section('coverage','پوشش صفحات منبع',coverage_lead,cov+P(f'{count} درس، {recall} پرسش یادآوری و فلش‌کارت، {len(mixed)} تمرین ترکیبی و {len(source_questions)} پرسش منبع. درس‌ها از پرسش‌ها جدا هستند.')+b.supplemental_sources(name))
     html=f'<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>استاد حاکمی · راهنمای مطالعهٔ باکتری‌شناسی</title><style>{css}</style></head><body><a class="screen-reader" href="#lessons">رفتن به درس‌ها</a><div class="site" id="top">{header}<details class="mobile-contents"><summary>فهرست درس‌ها و بخش‌ها</summary>{nav}</details><div class="layout"><nav class="sidebar" aria-label="فهرست درس‌ها"><h2>مسیر مطالعه</h2>{nav}</nav><main class="main">{intro}<div id="lessons">'+''.join(content)+'</div>'+extra+'<footer class="footnote">راهنمای فایل دوم · جزوهٔ استاد حاکمی · مستقل و بدون نیاز به اینترنت. برای ارجاع‌ها، فایل اصلی را در پوشهٔ بالاتر نگه دار. ذخیرهٔ پیشرفت به مرورگر و محل بازشدن فایل وابسته است.</footer></main></div></div></body></html>'
     html=b.tabbed_page(html).replace('۴۳ پرسش',f'{recall} پرسش').replace('۴۳ کارت',f'{recall} کارت').replace('۱ از ۴۳',f'1 از {recall}')
     for superscript,number in [('³','3'),('⁵','5'),('⁶','6'),('⁸','8'),('¹⁰','10'),('¹¹','11')]:
         html=html.replace(superscript,'<sup>'+number+'</sup>')
-    license=(ROOT/'_work/font-license.txt').read_text(encoding='utf-8').replace('--','- -')
+    license_lines = (ROOT/'_work/font-license.txt').read_text(encoding='utf-8').splitlines()
+    license = '\n'.join(line.rstrip() for line in license_lines).replace('--', '- -')
     html=html.replace('</head>','<!-- Embedded Vazirmatn font license:\n'+license+'\n--></head>')
     total_pages=max(p for pages,_,_ in coverage for p in pages)
     html=html.replace('استاد حاکمی',name).replace('فایل دوم','فایل '+ordinal).replace('جلسه‌های سوم، یازدهم و دوازدهم',sessions).replace('bacteriology-hakemi-v1','bacteriology-'+slug+'-v1')
@@ -435,8 +437,10 @@ def build(name='استاد حاکمی',slug='hakemi',ordinal='چهارم',sessio
         html=html.replace('پرسش‌های داخل متن با بیان روان‌تر از تمرین‌های تازه جدا شده‌اند. پاسخ‌ها با توضیح بیشتر و جمله‌بندی روان‌تر نوشته شده‌اند.','در این فایل، پرسش مستقل و صریحی برای بازنویسی شناسایی نشد. پرسش‌های این راهنما همگی تمرین درس‌اند؛ تأکیدهای استاد در درس‌ها حفظ شده‌اند.')
     html=b.persian_numbers(html)
     target=ROOT/(name+'.html');target.write_text(html,encoding='utf-8')
-    manifest={'source':name+'.pdf','source_pages':total_pages,'lessons':count,'recall_questions':recall,'mixed_questions':len(mixed),'source_questions':len(source_questions),'page_coverage':[{'pages':p,'sections':text,'lessons':ids} for p,text,ids in coverage]}
-    (ROOT/('_work/'+slug+'/coverage.json')).write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+    manifest={'source':unquote(SOURCE),'source_pages':total_pages,'lessons':count,'recall_questions':recall,'mixed_questions':len(mixed),'source_questions':len(source_questions),'page_coverage':[{'pages':p,'sections':text,'lessons':ids} for p,text,ids in coverage]}
+    coverage_file = ROOT / '_work' / slug / 'coverage.json'
+    coverage_file.parent.mkdir(exist_ok=True)
+    coverage_file.write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({'output':str(target),'bytes':target.stat().st_size,**{k:v for k,v in manifest.items() if k!='page_coverage'}},ensure_ascii=True))
 
 if __name__=='__main__':build()
