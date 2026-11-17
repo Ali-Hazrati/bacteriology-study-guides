@@ -1,6 +1,6 @@
 # Bacteriology Study Guides
 
-Persian-language study guides based on bacteriology lecture notes by professors at Shahid Beheshti University of Medical Sciences (SBMU), featuring 102 lessons, clear explanations, review questions, flashcards, and quick summaries to support focused study.
+Persian-language study guides based on bacteriology lecture notes by professors at Shahid Beheshti University of Medical Sciences (SBMU), featuring 102 lessons, clear explanations, review questions, flashcards, and quick summaries to support focused study.<br><br>
 
 
 
