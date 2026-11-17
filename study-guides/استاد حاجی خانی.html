@@ -191,17 +191,17 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   document.documentElement.classList.add('js');
   const PREFS='bacteriology-haji-khani-reader-v1';
   let preferences={size:100,theme:'light'};
-  try{const saved=JSON.parse(localStorage.getItem(PREFS));if(saved){if(Number.isFinite(saved.size))preferences.size=Math.max(80,Math.min(140,saved.size));if(['light','dark'].includes(saved.theme))preferences.theme=saved.theme;}}catch(e){}
+  try{const saved=JSON.parse(localStorage.getItem(PREFS));if(saved){if(Number.isFinite(saved.size))preferences.size=Math.max(60,Math.min(140,saved.size));if(['light','dark'].includes(saved.theme))preferences.theme=saved.theme;}}catch(e){}
   const save=()=>{try{localStorage.setItem(PREFS,JSON.stringify(preferences));}catch(e){}};
   const applyPreferences=()=>{
     document.documentElement.style.setProperty('--text-scale',preferences.size/100);
     document.documentElement.dataset.theme=preferences.theme;
     document.getElementById('text-size-value').textContent=preferences.size.toLocaleString('fa-IR')+'٪';
-    document.getElementById('text-smaller').disabled=preferences.size<=80;
+    document.getElementById('text-smaller').disabled=preferences.size<=60;
     document.getElementById('text-larger').disabled=preferences.size>=140;
     document.getElementById('theme-toggle').setAttribute('aria-checked',String(preferences.theme==='dark'));
   };
-  document.getElementById('text-smaller').addEventListener('click',()=>{preferences.size=Math.max(80,preferences.size-10);applyPreferences();save();});
+  document.getElementById('text-smaller').addEventListener('click',()=>{preferences.size=Math.max(60,preferences.size-10);applyPreferences();save();});
   document.getElementById('text-larger').addEventListener('click',()=>{preferences.size=Math.min(140,preferences.size+10);applyPreferences();save();});
   document.getElementById('theme-toggle').addEventListener('click',()=>{preferences.theme=preferences.theme==='dark'?'light':'dark';applyPreferences();save();});
   applyPreferences();
