@@ -4,6 +4,8 @@ Persian-language study guides based on bacteriology lecture notes by professors 
 
 
 
+
+
 # جزوه‌های باکتری‌شناسی
 
 راهنماهای مطالعهٔ فارسی برای نه جزوهٔ باکتری‌شناسی، شامل ۱۰۲ درس با بیان فارسی روان، پرسش و پاسخ تشریحی، فلش‌کارت و مرور سریع.
